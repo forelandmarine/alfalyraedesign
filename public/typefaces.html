@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alpha Lyrae Design — Typeface Selection</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,300&family=Barlow:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Outfit:wght@200;300;400;500&family=Tenor+Sans&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --deep:  #0c1a2e;
+  --warm:  #f5f0e8;
+  --gold:  #b8966b;
+  --mid:   #4a6080;
+  --rule:  rgba(12,26,46,0.1);
+  --ui:    'Jost', sans-serif;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { background: var(--warm); }
+
+body {
+  font-family: var(--ui);
+  background: var(--warm);
+  color: var(--deep);
+}
+
+.page-header {
+  padding: 64px 80px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--rule);
+}
+
+.page-title {
+  font-family: var(--ui);
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+
+.page-note {
+  font-size: 10px;
+  font-weight: 300;
+  color: var(--mid);
+  text-align: right;
+  line-height: 1.8;
+  max-width: 320px;
+}
+
+/* Each typeface entry */
+.face {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  border-bottom: 1px solid var(--rule);
+}
+
+.face-meta {
+  padding: 48px 40px 48px 80px;
+  border-right: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.face-num {
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  color: var(--mid);
+  margin-bottom: 12px;
+}
+
+.face-name {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--deep);
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.face-class {
+  font-size: 9.5px;
+  font-weight: 300;
+  color: var(--mid);
+  letter-spacing: 0.04em;
+}
+
+.face-desc {
+  font-size: 9px;
+  font-weight: 300;
+  color: var(--mid);
+  line-height: 1.75;
+  margin-top: 20px;
+}
+
+.face-specimen {
+  padding: 48px 80px 48px 56px;
+}
+
+.fs-mark {
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.fs-statement {
+  line-height: 1.1;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.fs-body {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #4a4440;
+  max-width: 560px;
+}
+
+/* Dark variant for alternating rows */
+.face.dark {
+  background: var(--deep);
+}
+.face.dark .face-meta {
+  border-right-color: rgba(245,240,232,0.08);
+}
+.face.dark .face-num  { color: rgba(245,240,232,0.35); }
+.face.dark .face-name { color: var(--warm); }
+.face.dark .face-class { color: rgba(245,240,232,0.45); }
+.face.dark .face-desc  { color: rgba(245,240,232,0.4); }
+.face.dark .fs-body    { color: rgba(245,240,232,0.55); }
+.face.dark             { border-bottom-color: rgba(245,240,232,0.06); }
+
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="page-title">Alpha Lyrae Design &nbsp;·&nbsp; Typeface Selection</div>
+  <div class="page-note">Ten options for the primary brand typeface.<br>Each shown at display, statement and body scale.</div>
+</div>
+
+<!-- 1. Playfair Display -->
+<div class="face">
+  <div class="face-meta">
+    <div>
+      <div class="face-num">01</div>
+      <div class="face-name">Playfair Display</div>
+      <div class="face-class">High-contrast serif</div>
+      <div class="face-desc">The editorial serif. Extreme stroke contrast, designed for large sizes. Used by Vogue, The Guardian, luxury brands worldwide. Confident and refined.</div>
+    </div>
+  </div>
+  <div class="face-specimen">
+    <span class="fs-mark" style="font-family:'Playfair Display',serif;font-size:clamp(22px,2.8vw,42px);font-weight:400;letter-spacing:0.04em;color:#0c1a2e">Alpha Lyrae <em style="font-style:italic;color:#b8966b">Design</em></span>
+    <span class="fs-statement" style="font-family:'Playfair Display',serif;font-size:clamp(32px,4.5vw,68px);font-weight:400;font-style:italic;color:#0c1a2e">We design it.</span>
+    <p class="fs-body" style="font-family:'Playfair Display',serif">Naval architecture and product design, carried from the first line to the final sea trial.</p>
+  </div>
+</div>
+
+<!-- 2. EB Garamond -->
+<div class="face dark">
+  <div class="face-meta">
+    <div>
+      <div class="face-num">02</div>
+      <div class="face-name">EB Garamond</div>
+      <div class="face-class">Old-style serif</div>
+      <div class="face-desc">Claude Garamond's sixteenth-century typeface. Italian Renaissance origin. The most historically authentic choice for a Roman studio. Warm, authoritative, ancient.</div>
+    </div>
+  </div>
+  <div class="face-specimen">
+    <span class="fs-mark" style="font-family:'EB Garamond',serif;font-size:clamp(22px,2.8vw,42px);font-weight:400;letter-spacing:0.04em;color:#f5f0e8">Alpha Lyrae <em style="font-style:italic;color:#b8966b">Design</em></span>
+    <span class="fs-statement" style="font-family:'EB Garamond',serif;font-size:clamp(32px,4.5vw,68px);font-weight:400;font-style:italic;color:#f5f0e8">We design it.</span>
+    <p class="fs-body" style="font-family:'EB Garamond',serif">Naval architecture and product design, carried from the first line to the final sea trial.</p>
+  </div>
+</div>
+
+<!-- 3. Spectral -->
+<div class="face">
+  <div class="face-meta">
+    <div>
+      <div class="face-num">03</div>
+      <div class="face-name">Spectral</div>
+      <div class="face-class">Contemporary serif</div>
+      <div class="face-desc">Designed by Production Type for Google Fonts. Screen-first, precise, slightly colder than Garamond. Architectural quality. Works at both text and display sizes.</div>
+    </div>
+  </div>
+  <div class="face-specimen">
+    <span class="fs-mark" style="font-family:'Spectral',serif;font-size:clamp(22px,2.8vw,42px);font-weight:400;letter-spacing:0.04em;color:#0c1a2e">Alpha Lyrae <em style="font-style:italic;color:#b8966b">Design</em></span>
+    <span class="fs-statement" style="font-family:'Spectral',serif;font-size:clamp(32px,4.5vw,68px);font-weight:300;font-style:italic;color:#0c1a2e">We design it.</span>
+    <p class="fs-body" style="font-family:'Spectral',serif">Naval architecture and product design, carried from the first line to the final sea trial.</p>
+  </div>
+</div>
+
+<!-- 4. Libre Baskerville -->
+<div class="face dark">
+  <div class="face-meta">
+    <div>
+      <div class="face-num">04</div>
+      <div class="face-name">Libre Baskerville</div>
+      <div class="face-class">Transitional serif</div>
+      <div class="face-desc">John Baskerville's eighteenth-century design, optimised for screen. Institutional authority, high legibility. More grounded and serious than Garamond — less decorative.</div>
+    </div>
+  </div>
+  <div class="face-specimen">
+    <span class="fs-mark" style="font-family:'Libre Baskerville',serif;font-size:clamp(22px,2.8vw,42px);font-weight:400;letter-spacing:0.04em;color:#f5f0e8">Alpha Lyrae <em style="font-style:italic;color:#b8966b">Design</em></span>
+    <span class="fs-statement" style="font-family:'Libre Baskerville',serif;font-size:clamp(28px,3.8vw,58px);font-weight:400;font-style:italic;color:#f5f0e8">We design it.</span>
+    <p class="fs-body" style="font-family:'Libre Baskerville',serif">Naval architecture and product design, carried from the first line to the final sea trial.</p>
+  </div>
+</div>
+
+<!-- 5. Crimson Pro -->
+<div class="face">
+  <div class="face-meta">
+    <div>
+      <div class="face-num">05</div>
+      <div class="face-name">Crimson Pro</div>
+      <div class="face-class">Humanist serif</div>
+      <div class="face-desc">A refined humanist serif with book-publishing quality. Lighter and more fluid than Baskerville. Beautiful in long text. Elegant without being fussy.</div>
+    </div>
+  </div>
+  <div class="face-specimen">
+    <span class="fs-mark" style="font-family:'Crimson Pro',serif;font-size:clamp(22px,2.8vw,42px);font-weight:400;letter-spacing:0.04em;color:#0c1a2e">Alpha Lyrae <em style="font-style:italic;color:#b8966b">Design</em></span>
+    <span class="fs-statement" style="font-family:'Crimson Pro',serif;font-size:clamp(32px,4.5vw,68px);font-weight:300;font-style:italic;color:#0c1a2e">We design it.</span>
+    <p class="fs-body" style="font-family:'Crimson Pro',serif">Naval architecture and product design, carried from the first line to the final sea trial.</p>
+  </div>
+</div>
+
+<!-- 6. Raleway -->
+<div class="face dark">
+  <div class="face-meta">
+    <div>
+      <div class="face-num">06</div>
+      <div class="face-name">Raleway</div>
+      <div class="face-class">Geometric sans-serif</div>
+      <div class="face-desc">An elegant geometric sans with beautiful thin weights. Fashion and luxury brand territory. The thin cuts are exceptional at display sizes. More refined than Futura.</div>
+    </div>
+  </div>
+  <div class="face-specimen">
+    <span class="fs-mark" style="font-family:'Raleway',sans-serif;font-size:clamp(22px,2.8vw,42px);font-weight:300;letter-spacing:0.12em;text-transform:uppercase;color:#f5f0e8">Alpha Lyrae <em style="font-style:normal;color:#b8966b">Design</em></span>
+    <span class="fs-statement" style="font-family:'Raleway',sans-serif;font-size:clamp(28px,3.8vw,58px);font-weight:200;font-style:italic;color:#f5f0e8">We design it.</span>
+    <p class="fs-body" style="font-family:'Raleway',sans-serif;font-weight:300">Naval architecture and product design, carried from the first line to the final sea trial.</p>
+  </div>
+</div>
+
+<!-- 7. Josefin Sans -->
+<div class="face">
+  <div class="face-meta">
+    <div>
+      <div class="face-num">07</div>
+      <div class="face-name">Josefin Sans</div>
+      <div class="face-class">Geometric sans-serif</div>
+      <div class="face-desc">Inspired by 1920s geometric typefaces — Futura, Kabel, Gill Sans. Pure geometry, distinctive thin weights, elegant capitals. Gives the brand a 1930s Italian industrial character.</div>
+    </div>
+  </div>
+  <div class="face-specimen">
+    <span class="fs-mark" style="font-family:'Josefin Sans',sans-serif;font-size:clamp(20px,2.6vw,38px);font-weight:200;letter-spacing:0.18em;text-transform:uppercase;color:#0c1a2e">Alpha Lyrae <em style="font-style:normal;color:#b8966b">Design</em></span>
+    <span class="fs-statement" style="font-family:'Josefin Sans',sans-serif;font-size:clamp(28px,3.8vw,58px);font-weight:100;font-style:italic;letter-spacing:0.04em;color:#0c1a2e">We design it.</span>
+    <p class="fs-body" style="font-family:'Josefin Sans',sans-serif;font-weight:300;letter-spacing:0.03em">Naval architecture and product design, carried from the first line to the final sea trial.</p>
+  </div>
+</div>
+
+<!-- 8. Barlow -->
+<div class="face dark">
+  <div class="face-meta">
+    <div>
+      <div class="face-num">08</div>
+      <div class="face-name">Barlow</div>
+      <div class="face-class">Grotesque sans-serif</div>
+      <div class="face-desc">A rounded grotesque inspired by California highway signs. Precise, slightly industrial, available in condensed variants. Grounded and functional — architectural rather than fashionable.</div>
+    </div>
+  </div>
+  <div class="face-specimen">
+    <span class="fs-mark" style="font-family:'Barlow',sans-serif;font-size:clamp(22px,2.8vw,42px);font-weight:300;letter-spacing:0.10em;text-transform:uppercase;color:#f5f0e8">Alpha Lyrae <em style="font-style:normal;color:#b8966b">Design</em></span>
+    <span class="fs-statement" style="font-family:'Barlow',sans-serif;font-size:clamp(28px,3.8vw,58px);font-weight:200;font-style:italic;color:#f5f0e8">We design it.</span>
+    <p class="fs-body" style="font-family:'Barlow',sans-serif;font-weight:300">Naval architecture and product design, carried from the first line to the final sea trial.</p>
+  </div>
+</div>
+
+<!-- 9. Outfit -->
+<div class="face">
+  <div class="face-meta">
+    <div>
+      <div class="face-num">09</div>
+      <div class="face-name">Outfit</div>
+      <div class="face-class">Modern geometric sans-serif</div>
+      <div class="face-desc">A contemporary geometric sans with variable weight. Clean, confident, and slightly warmer than standard geometrics. Luxury technology sector territory — Rolls-Royce, Apple-adjacent.</div>
+    </div>
+  </div>
+  <div class="face-specimen">
+    <span class="fs-mark" style="font-family:'Outfit',sans-serif;font-size:clamp(22px,2.8vw,42px);font-weight:300;letter-spacing:0.08em;text-transform:uppercase;color:#0c1a2e">Alpha Lyrae <em style="font-style:normal;color:#b8966b">Design</em></span>
+    <span class="fs-statement" style="font-family:'Outfit',sans-serif;font-size:clamp(28px,3.8vw,58px);font-weight:200;color:#0c1a2e">We design it.</span>
+    <p class="fs-body" style="font-family:'Outfit',sans-serif;font-weight:300">Naval architecture and product design, carried from the first line to the final sea trial.</p>
+  </div>
+</div>
+
+<!-- 10. Tenor Sans -->
+<div class="face dark">
+  <div class="face-meta">
+    <div>
+      <div class="face-num">10</div>
+      <div class="face-name">Tenor Sans</div>
+      <div class="face-class">Humanist sans-serif</div>
+      <div class="face-desc">A refined humanist sans with subtle calligraphic origins. Less common than Futura or Gill Sans. Elegant and distinctive — the kind of typeface that reads as considered, not obvious.</div>
+    </div>
+  </div>
+  <div class="face-specimen">
+    <span class="fs-mark" style="font-family:'Tenor Sans',sans-serif;font-size:clamp(22px,2.8vw,42px);font-weight:400;letter-spacing:0.10em;text-transform:uppercase;color:#f5f0e8">Alpha Lyrae <em style="font-style:normal;color:#b8966b">Design</em></span>
+    <span class="fs-statement" style="font-family:'Tenor Sans',sans-serif;font-size:clamp(28px,3.8vw,58px);font-weight:400;color:#f5f0e8">We design it.</span>
+    <p class="fs-body" style="font-family:'Tenor Sans',sans-serif">Naval architecture and product design, carried from the first line to the final sea trial.</p>
+  </div>
+</div>
+
+<div style="background:var(--warm);padding:48px 80px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--rule)">
+  <div style="font-size:9px;font-weight:300;letter-spacing:0.14em;text-transform:uppercase;color:var(--mid)">All typefaces available via Google Fonts</div>
+  <div style="font-size:9px;font-weight:300;letter-spacing:0.14em;text-transform:uppercase;color:var(--mid)">Alpha Lyrae Design &nbsp;·&nbsp; 2026</div>
+</div>
+
+</body>
+</html>

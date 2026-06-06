@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alpha Lyrae Design — Brand Identity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --deep:  #0c1a2e;
+  --warm:  #f5f0e8;
+  --gold:  #b8966b;
+  --mid:   #4a6080;
+  --dim:   rgba(245,240,232,0.58);
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'Jost', 'Helvetica Neue', sans-serif;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { background: var(--deep); }
+
+body {
+  font-family: var(--sans);
+  background: var(--deep);
+  color: var(--deep);
+  overflow-x: hidden;
+}
+
+/* ── COVER ── */
+
+.cover {
+  height: 100vh;
+  min-height: 680px;
+  background: var(--deep);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 80px;
+}
+
+.cover-meta {
+  position: absolute;
+  bottom: 56px;
+  left: 80px;
+  right: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.cover-meta-label {
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--dim);
+  line-height: 2;
+}
+
+.cover-mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.wm-name {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 300;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--warm);
+  display: block;
+  line-height: 1;
+  text-align: center;
+}
+
+.wm-sub {
+  font-size: 8.5px;
+  font-weight: 300;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--dim);
+  display: block;
+  margin-top: 14px;
+  text-align: center;
+}
+
+/* ── ORIGIN ── */
+
+.origin {
+  background: var(--warm);
+  padding: 140px 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.origin-mark {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 56px;
+}
+
+.origin-data {
+  font-size: 10.5px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--mid);
+  line-height: 2.2;
+}
+
+.origin-data strong { font-weight: 400; color: var(--deep); }
+
+.origin-statement {
+  font-family: var(--serif);
+  font-size: clamp(30px, 3.2vw, 50px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.28;
+  color: var(--deep);
+  margin-bottom: 44px;
+}
+
+.origin-body {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: #3a3530;
+}
+
+.origin-body + .origin-body { margin-top: 18px; }
+
+/* ── COLOUR ── */
+
+.colour-band {
+  padding: 72px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.colour-band.c-deep { background: var(--deep); min-height: 220px; }
+.colour-band.c-warm { background: var(--warm); }
+.colour-band.c-gold { background: var(--gold); min-height: 180px; }
+.colour-band.c-mid  { background: var(--mid);  min-height: 100px; padding: 48px 120px; }
+
+.colour-name {
+  font-family: var(--serif);
+  font-size: clamp(36px, 4.5vw, 72px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1;
+}
+
+.colour-meta {
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.07em;
+  text-align: right;
+  line-height: 2.1;
+}
+
+.c-deep .colour-name  { color: var(--warm); }
+.c-deep .colour-meta  { color: var(--dim); }
+.c-warm .colour-name  { color: var(--deep); }
+.c-warm .colour-meta  { color: var(--mid); }
+.c-gold .colour-name  { color: var(--deep); }
+.c-gold .colour-meta  { color: rgba(12,26,46,0.55); }
+.c-mid  .colour-name  { color: var(--warm); font-size: clamp(22px, 2.8vw, 44px); }
+.c-mid  .colour-meta  { color: rgba(245,240,232,0.45); }
+
+.colour-rationale {
+  background: var(--deep);
+  padding: 36px 120px;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: rgba(245,240,232,0.6);
+  line-height: 1.85;
+}
+
+.colour-rationale strong { color: rgba(245,240,232,0.75); font-weight: 400; }
+
+/* ── MARK VARIANTS ── */
+
+.mark-section {
+  background: var(--warm);
+  padding: 120px 120px;
+}
+
+.mark-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 56px;
+}
+
+.mark-cell {
+  padding: 52px 36px 44px;
+}
+
+.mark-cell .wm {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  display: block;
+}
+
+.mark-cell .wm-label {
+  font-size: 8px;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 24px;
+  opacity: 0.4;
+}
+
+.mc-a { background: var(--warm); }
+.mc-a .wm { color: var(--deep); }
+.mc-a .wm em { color: var(--gold); font-style: normal; }
+.mc-a .wm-label { color: var(--deep); }
+
+.mc-b { background: var(--deep); }
+.mc-b .wm { color: var(--warm); }
+.mc-b .wm em { color: var(--gold); font-style: normal; }
+.mc-b .wm-label { color: var(--warm); }
+
+.mc-c { background: var(--gold); }
+.mc-c .wm { color: var(--deep); }
+.mc-c .wm em { font-style: normal; opacity: 0.55; }
+.mc-c .wm-label { color: var(--deep); }
+
+.mc-d { background: var(--warm); }
+.mc-d .wm { color: var(--mid); }
+.mc-d .wm em { font-style: normal; }
+.mc-d .wm-label { color: var(--mid); }
+
+/* ── TYPE ── */
+
+.type-section {
+  background: var(--warm);
+  padding: 120px 120px 140px;
+}
+
+.type-heading-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  margin-bottom: 80px;
+}
+
+.type-name-display {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3vw, 46px);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--deep);
+}
+
+.type-intro-text {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: #3a3530;
+  padding-top: 8px;
+}
+
+.type-specimen-block {}
+
+.ts-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 32px;
+  padding: 22px 0;
+  align-items: baseline;
+}
+
+.ts-spec {
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--mid);
+  line-height: 1.7;
+}
+
+.ts-sample {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 1.1;
+}
+
+/* ── VOICE ── */
+
+.voice-section {
+  background: var(--deep);
+  padding: 160px 120px;
+}
+
+.voice-lead {
+  font-family: var(--serif);
+  font-size: clamp(38px, 5.5vw, 80px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.15;
+  color: var(--warm);
+  max-width: 900px;
+}
+
+.voice-lead em { font-style: normal; color: var(--gold); }
+
+.voice-pairs {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.vp-quote {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.65;
+  color: rgba(245,240,232,0.72);
+}
+
+.vp-reject .vp-quote {
+  color: rgba(245,240,232,0.25);
+  text-decoration: line-through;
+  text-decoration-color: rgba(245,240,232,0.12);
+}
+
+/* ── APPLICATIONS ── */
+
+.applications {
+  background: var(--warm);
+  padding: 140px 120px;
+}
+
+.app-section-intro {
+  margin-bottom: 64px;
+}
+
+.app-intro-text {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--mid);
+  line-height: 1.8;
+  max-width: 480px;
+  margin-top: 16px;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.biz-card {
+  background: var(--deep);
+  aspect-ratio: 1.75;
+  padding: 48px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+
+.biz-card::after {
+  content: '';
+  position: absolute;
+  right: -48px;
+  bottom: -48px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 1px solid rgba(184,150,107,0.12);
+}
+
+.bc-top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.bc-name {
+  font-family: var(--serif);
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--warm);
+  line-height: 1.5;
+}
+
+.bc-name em { color: var(--gold); font-style: normal; display: block; }
+
+.bc-info {
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.07em;
+  color: rgba(245,240,232,0.55);
+  line-height: 2.1;
+}
+
+.doc-mock {
+  background: var(--warm);
+  border: 1px solid rgba(12,26,46,0.10);
+  overflow: hidden;
+}
+
+.dm-head {
+  background: var(--deep);
+  padding: 18px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dm-wm {
+  font-family: var(--serif);
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--warm);
+}
+
+.dm-wm em { color: var(--gold); font-style: normal; }
+
+.dm-ref {
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.07em;
+  color: var(--dim);
+}
+
+.dm-body { padding: 22px 28px 18px; }
+
+.dm-l { height: 5px; background: rgba(12,26,46,0.08); margin: 7px 0; }
+.dm-l.w80 { width: 80%; }
+.dm-l.w55 { width: 55%; }
+.dm-l.w70 { width: 70%; }
+.dm-l.w40 { width: 40%; }
+.dm-l.w90 { width: 90%; }
+
+.site-mock {
+  grid-column: span 2;
+  overflow: hidden;
+  border: 1px solid rgba(12,26,46,0.10);
+}
+
+.sm-nav {
+  padding: 20px 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--warm);
+}
+
+.sm-wm {
+  font-family: var(--serif);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--deep);
+}
+
+.sm-wm em { color: var(--gold); font-style: normal; }
+
+.sm-links {
+  display: flex;
+  gap: 32px;
+}
+
+.sm-links span {
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+
+.sm-links span.on { color: var(--deep); }
+
+.sm-hero {
+  background: var(--deep);
+  padding: 72px 44px 64px;
+}
+
+.sm-h {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.6vw, 56px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--warm);
+}
+
+.sm-h em { font-style: italic; color: var(--gold); }
+
+.sm-body {
+  font-size: 11px;
+  font-weight: 300;
+  color: rgba(245,240,232,0.60);
+  margin-top: 20px;
+  max-width: 360px;
+  line-height: 1.75;
+}
+
+.sm-cta {
+  display: inline-block;
+  margin-top: 24px;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ── FOOTER ── */
+
+footer {
+  background: var(--deep);
+  padding: 72px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-mark {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--warm);
+}
+
+.footer-mark em { color: var(--gold); font-style: normal; }
+
+.footer-meta {
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.07em;
+  color: var(--dim);
+  text-align: right;
+  line-height: 2;
+}
+
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════
+     COVER
+══════════════════════════════════ -->
+
+<section class="cover">
+  <div class="cover-mark">
+
+    <!-- Lyra constellation mark -->
+    <svg width="52" height="68" viewBox="0 0 52 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Connecting lines -->
+      <line x1="26" y1="7" x2="11" y2="34" stroke="rgba(245,240,232,0.35)" stroke-width="0.8"/>
+      <line x1="26" y1="7" x2="41" y2="34" stroke="rgba(245,240,232,0.35)" stroke-width="0.8"/>
+      <line x1="11" y1="34" x2="41" y2="34" stroke="rgba(245,240,232,0.25)" stroke-width="0.8"/>
+      <line x1="11" y1="34" x2="16" y2="60" stroke="rgba(245,240,232,0.35)" stroke-width="0.8"/>
+      <line x1="41" y1="34" x2="36" y2="60" stroke="rgba(245,240,232,0.35)" stroke-width="0.8"/>
+      <line x1="16" y1="60" x2="36" y2="60" stroke="rgba(245,240,232,0.25)" stroke-width="0.8"/>
+      <!-- Stars -->
+      <!-- Vega — α Lyrae — brightest -->
+      <circle cx="26" cy="7" r="2.8" fill="#b8966b"/>
+      <!-- β Lyrae -->
+      <circle cx="16" cy="60" r="1.6" fill="rgba(245,240,232,0.75)"/>
+      <!-- γ Lyrae -->
+      <circle cx="36" cy="60" r="1.6" fill="rgba(245,240,232,0.75)"/>
+      <!-- δ Lyrae -->
+      <circle cx="11" cy="34" r="1.2" fill="rgba(245,240,232,0.60)"/>
+      <!-- ε Lyrae -->
+      <circle cx="41" cy="34" r="1.2" fill="rgba(245,240,232,0.60)"/>
+    </svg>
+
+    <div class="wordmark-cover">
+      <span class="wm-name">Alpha Lyrae</span>
+      <span class="wm-sub">Design &nbsp;·&nbsp; Roma, Italia</span>
+    </div>
+  </div>
+
+  <div class="cover-meta">
+    <div class="cover-meta-label">
+      Brand Identity<br>
+      AL-BR-001
+    </div>
+    <div class="cover-meta-label" style="text-align:right">
+      2026<br>
+      Confidential
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     ORIGIN
+══════════════════════════════════ -->
+
+<section class="origin">
+  <div>
+    <div class="origin-mark">
+      <!-- Lyra mark on warm background -->
+      <svg width="72" height="92" viewBox="0 0 52 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="26" y1="7" x2="11" y2="34" stroke="rgba(12,26,46,0.3)" stroke-width="0.8"/>
+        <line x1="26" y1="7" x2="41" y2="34" stroke="rgba(12,26,46,0.3)" stroke-width="0.8"/>
+        <line x1="11" y1="34" x2="41" y2="34" stroke="rgba(12,26,46,0.18)" stroke-width="0.8"/>
+        <line x1="11" y1="34" x2="16" y2="60" stroke="rgba(12,26,46,0.3)" stroke-width="0.8"/>
+        <line x1="41" y1="34" x2="36" y2="60" stroke="rgba(12,26,46,0.3)" stroke-width="0.8"/>
+        <line x1="16" y1="60" x2="36" y2="60" stroke="rgba(12,26,46,0.18)" stroke-width="0.8"/>
+        <circle cx="26" cy="7" r="2.8" fill="#b8966b"/>
+        <circle cx="16" cy="60" r="1.6" fill="rgba(12,26,46,0.65)"/>
+        <circle cx="36" cy="60" r="1.6" fill="rgba(12,26,46,0.65)"/>
+        <circle cx="11" cy="34" r="1.2" fill="rgba(12,26,46,0.5)"/>
+        <circle cx="41" cy="34" r="1.2" fill="rgba(12,26,46,0.5)"/>
+      </svg>
+    </div>
+
+    <div class="origin-data">
+      <strong>Star</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &alpha; Lyrae &nbsp;&middot;&nbsp; Vega<br>
+      <strong>Spectral class</strong> &nbsp;&nbsp; A0Va, main sequence<br>
+      <strong>Temperature</strong> &nbsp;&nbsp;&nbsp; 9,602 K<br>
+      <strong>Colour</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Blue-white<br>
+      <strong>Distance</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25.04 light years<br>
+      <strong>Catalogue</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HR 7001 &nbsp;&middot;&nbsp; HD 172167<br>
+      <strong>Magnitude</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +0.03 (fifth brightest)
+    </div>
+  </div>
+
+  <div>
+    <p class="origin-statement">The name derives from a star. The practice derives from Rome.</p>
+
+    <p class="origin-body">Alpha Lyrae Design is a naval architecture and product design studio based in Rome. Its work spans yacht design, industrial product design, 3D fabrication, and the project management of new construction.</p>
+
+    <p class="origin-body">What distinguishes the studio is a singular proposition: most design offices draw. Yards build. Alpha Lyrae does both. From the first offset table to the final sea trial, one team carries the project.</p>
+
+    <p class="origin-body" style="margin-top:28px; font-size:12px; color:var(--mid)">The studio takes its name from &alpha;&nbsp;Lyrae, the star Vega. At 9,602&nbsp;K, Vega burns blue-white. That precise blue is the brand&#8217;s only accent colour &mdash; not chosen aesthetically, but measured.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     COLOUR
+══════════════════════════════════ -->
+
+<div class="colour-band c-deep">
+  <div class="colour-name">Profondo</div>
+  <div class="colour-meta">#0C1A2E<br>12 &middot; 26 &middot; 46<br>Primary surface</div>
+</div>
+
+<div class="colour-band c-warm">
+  <div class="colour-name">Avorio</div>
+  <div class="colour-meta">#F5F0E8<br>245 &middot; 240 &middot; 232<br>Primary ground</div>
+</div>
+
+<div class="colour-band c-gold">
+  <div>
+    <div class="colour-name">Vega</div>
+    <div style="font-family:var(--serif);font-size:14px;font-weight:300;font-style:italic;color:rgba(12,26,46,0.55);margin-top:12px;max-width:320px;line-height:1.6">&alpha;&nbsp;Lyrae at 9,602&nbsp;K &mdash; translated from stellar temperature to visible spectrum, approximated within sRGB gamut.</div>
+  </div>
+  <div class="colour-meta">#B8966B<br>184 &middot; 150 &middot; 107<br>Accent &middot; mark &middot; emphasis</div>
+</div>
+
+<div class="colour-band c-mid">
+  <div class="colour-name">Mare</div>
+  <div class="colour-meta">#4A6080<br>74 &middot; 96 &middot; 128<br>Secondary text</div>
+</div>
+
+<div class="colour-rationale">
+  The palette is anchored in the draughting room and the sea. <strong>Profondo</strong> &mdash; deep ocean at night. <strong>Avorio</strong> &mdash; cartridge paper, unworn. <strong>Vega</strong> &mdash; the one colour that is not a choice but a measurement. <strong>Mare</strong> &mdash; the Tyrrhenian in grey weather, the colour of working drawings.
+</div>
+
+<!-- ══════════════════════════════════
+     MARK IN USE
+══════════════════════════════════ -->
+
+<section class="mark-section">
+  <p style="font-family:var(--serif);font-size:clamp(22px,2.4vw,38px);font-weight:300;font-style:italic;color:var(--deep)">The mark is the name — set precisely, used consistently.</p>
+  <p style="font-size:11px;font-weight:300;color:var(--mid);margin-top:16px;max-width:520px;line-height:1.8">No symbol exists separately from the wordmark. The Lyra constellation functions only as a micro-mark at small scale and as a standalone device in contexts where the full name cannot be reproduced. The constellation&#8217;s geometry is astronomical, not decorative.</p>
+
+  <div class="mark-grid">
+    <div class="mark-cell mc-a">
+      <!-- Lyra micro -->
+      <svg width="20" height="26" viewBox="0 0 52 68" fill="none" style="display:block;margin-bottom:14px">
+        <line x1="26" y1="7" x2="11" y2="34" stroke="rgba(12,26,46,0.3)" stroke-width="1.5"/>
+        <line x1="26" y1="7" x2="41" y2="34" stroke="rgba(12,26,46,0.3)" stroke-width="1.5"/>
+        <line x1="11" y1="34" x2="41" y2="34" stroke="rgba(12,26,46,0.2)" stroke-width="1.5"/>
+        <line x1="11" y1="34" x2="16" y2="60" stroke="rgba(12,26,46,0.3)" stroke-width="1.5"/>
+        <line x1="41" y1="34" x2="36" y2="60" stroke="rgba(12,26,46,0.3)" stroke-width="1.5"/>
+        <line x1="16" y1="60" x2="36" y2="60" stroke="rgba(12,26,46,0.2)" stroke-width="1.5"/>
+        <circle cx="26" cy="7" r="4" fill="#b8966b"/>
+        <circle cx="16" cy="60" r="2.5" fill="rgba(12,26,46,0.6)"/>
+        <circle cx="36" cy="60" r="2.5" fill="rgba(12,26,46,0.6)"/>
+        <circle cx="11" cy="34" r="2" fill="rgba(12,26,46,0.45)"/>
+        <circle cx="41" cy="34" r="2" fill="rgba(12,26,46,0.45)"/>
+      </svg>
+      <span class="wm">Alpha Lyrae<br><em>Design</em></span>
+      <span class="wm-label">Primary</span>
+    </div>
+    <div class="mark-cell mc-b">
+      <svg width="20" height="26" viewBox="0 0 52 68" fill="none" style="display:block;margin-bottom:14px">
+        <line x1="26" y1="7" x2="11" y2="34" stroke="rgba(245,240,232,0.3)" stroke-width="1.5"/>
+        <line x1="26" y1="7" x2="41" y2="34" stroke="rgba(245,240,232,0.3)" stroke-width="1.5"/>
+        <line x1="11" y1="34" x2="41" y2="34" stroke="rgba(245,240,232,0.2)" stroke-width="1.5"/>
+        <line x1="11" y1="34" x2="16" y2="60" stroke="rgba(245,240,232,0.3)" stroke-width="1.5"/>
+        <line x1="41" y1="34" x2="36" y2="60" stroke="rgba(245,240,232,0.3)" stroke-width="1.5"/>
+        <line x1="16" y1="60" x2="36" y2="60" stroke="rgba(245,240,232,0.2)" stroke-width="1.5"/>
+        <circle cx="26" cy="7" r="4" fill="#b8966b"/>
+        <circle cx="16" cy="60" r="2.5" fill="rgba(245,240,232,0.6)"/>
+        <circle cx="36" cy="60" r="2.5" fill="rgba(245,240,232,0.6)"/>
+        <circle cx="11" cy="34" r="2" fill="rgba(245,240,232,0.45)"/>
+        <circle cx="41" cy="34" r="2" fill="rgba(245,240,232,0.45)"/>
+      </svg>
+      <span class="wm">Alpha Lyrae<br><em>Design</em></span>
+      <span class="wm-label">Reversed</span>
+    </div>
+    <div class="mark-cell mc-c">
+      <svg width="20" height="26" viewBox="0 0 52 68" fill="none" style="display:block;margin-bottom:14px">
+        <line x1="26" y1="7" x2="11" y2="34" stroke="rgba(12,26,46,0.25)" stroke-width="1.5"/>
+        <line x1="26" y1="7" x2="41" y2="34" stroke="rgba(12,26,46,0.25)" stroke-width="1.5"/>
+        <line x1="11" y1="34" x2="41" y2="34" stroke="rgba(12,26,46,0.18)" stroke-width="1.5"/>
+        <line x1="11" y1="34" x2="16" y2="60" stroke="rgba(12,26,46,0.25)" stroke-width="1.5"/>
+        <line x1="41" y1="34" x2="36" y2="60" stroke="rgba(12,26,46,0.25)" stroke-width="1.5"/>
+        <line x1="16" y1="60" x2="36" y2="60" stroke="rgba(12,26,46,0.18)" stroke-width="1.5"/>
+        <circle cx="26" cy="7" r="4" fill="rgba(12,26,46,0.7)"/>
+        <circle cx="16" cy="60" r="2.5" fill="rgba(12,26,46,0.5)"/>
+        <circle cx="36" cy="60" r="2.5" fill="rgba(12,26,46,0.5)"/>
+        <circle cx="11" cy="34" r="2" fill="rgba(12,26,46,0.4)"/>
+        <circle cx="41" cy="34" r="2" fill="rgba(12,26,46,0.4)"/>
+      </svg>
+      <span class="wm">Alpha Lyrae<br><em>Design</em></span>
+      <span class="wm-label">Accent field</span>
+    </div>
+    <div class="mark-cell mc-d">
+      <svg width="20" height="26" viewBox="0 0 52 68" fill="none" style="display:block;margin-bottom:14px">
+        <line x1="26" y1="7" x2="11" y2="34" stroke="rgba(74,96,128,0.4)" stroke-width="1.5"/>
+        <line x1="26" y1="7" x2="41" y2="34" stroke="rgba(74,96,128,0.4)" stroke-width="1.5"/>
+        <line x1="11" y1="34" x2="41" y2="34" stroke="rgba(74,96,128,0.25)" stroke-width="1.5"/>
+        <line x1="11" y1="34" x2="16" y2="60" stroke="rgba(74,96,128,0.4)" stroke-width="1.5"/>
+        <line x1="41" y1="34" x2="36" y2="60" stroke="rgba(74,96,128,0.4)" stroke-width="1.5"/>
+        <line x1="16" y1="60" x2="36" y2="60" stroke="rgba(74,96,128,0.25)" stroke-width="1.5"/>
+        <circle cx="26" cy="7" r="4" fill="rgba(74,96,128,0.7)"/>
+        <circle cx="16" cy="60" r="2.5" fill="rgba(74,96,128,0.55)"/>
+        <circle cx="36" cy="60" r="2.5" fill="rgba(74,96,128,0.55)"/>
+        <circle cx="11" cy="34" r="2" fill="rgba(74,96,128,0.4)"/>
+        <circle cx="41" cy="34" r="2" fill="rgba(74,96,128,0.4)"/>
+      </svg>
+      <span class="wm">Alpha Lyrae<br><em>Design</em></span>
+      <span class="wm-label">Monochrome</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     TYPE
+══════════════════════════════════ -->
+
+<section class="type-section">
+  <div class="type-heading-block">
+    <div>
+      <p class="type-name-display">Cormorant Garamond<br>with Jost</p>
+    </div>
+    <div>
+      <p class="type-intro-text" style="padding-top:44px">Two voices. Cormorant Garamond carries the Italian Renaissance tradition &mdash; high contrast, refined, designed for text that rewards attention. Jost handles the structural and navigational language &mdash; geometric, neutral, invisible. The pairing separates what speaks from what organises.</p>
+    </div>
+  </div>
+
+  <div class="type-specimen-block">
+    <div class="ts-row">
+      <div class="ts-spec">Cormorant<br>72px / wt 300<br>italic</div>
+      <div class="ts-sample" style="font-family:var(--serif);font-size:clamp(40px,5.5vw,72px);font-weight:300;font-style:italic;color:var(--deep)">Naval precision.</div>
+    </div>
+    <div class="ts-row">
+      <div class="ts-spec">Cormorant<br>48px / wt 300</div>
+      <div class="ts-sample" style="font-family:var(--serif);font-size:clamp(28px,3.8vw,48px);font-weight:300;color:var(--deep)">Italian form.</div>
+    </div>
+    <div class="ts-row">
+      <div class="ts-spec">Cormorant<br>32px / wt 400<br>italic</div>
+      <div class="ts-sample" style="font-family:var(--serif);font-size:clamp(20px,2.6vw,32px);font-weight:400;font-style:italic;color:var(--deep)">From offset table to sea trial.</div>
+    </div>
+    <div class="ts-row">
+      <div class="ts-spec">Jost<br>13px / wt 300</div>
+      <div class="ts-sample" style="font-family:var(--sans);font-size:13px;font-weight:300;color:var(--deep);letter-spacing:0.02em">Naval architecture, product design, 3D fabrication and project management.</div>
+    </div>
+    <div class="ts-row">
+      <div class="ts-spec">Jost<br>9px / wt 300<br>tracked</div>
+      <div class="ts-sample" style="font-family:var(--sans);font-size:9px;font-weight:300;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid)">Work &nbsp;&nbsp; Process &nbsp;&nbsp; Capabilities &nbsp;&nbsp; Studio &nbsp;&nbsp; Contact</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     VOICE
+══════════════════════════════════ -->
+
+<section class="voice-section">
+  <p class="voice-lead">
+    &#8220;Most studios draw.<br>
+    Yards build.<br>
+    Alpha Lyrae does <em>both.</em>&#8221;
+  </p>
+
+  <div class="voice-pairs">
+    <div>
+      <p class="vp-quote">&#8220;From the first offset table to the final sea trial, we carry the project.&#8221;</p>
+      <p class="vp-quote" style="margin-top:20px">&#8220;Naval architecture, product engineering, fabrication. No handoffs. No translation loss.&#8221;</p>
+    </div>
+    <div class="vp-reject">
+      <p class="vp-quote">&#8220;A passionate team of innovators delivering world-class solutions.&#8221;</p>
+      <p class="vp-quote" style="margin-top:20px">&#8220;Where art meets engineering. Crafting dreams on water.&#8221;</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     APPLICATIONS
+══════════════════════════════════ -->
+
+<section class="applications">
+  <div class="app-section-intro">
+    <p style="font-family:var(--serif);font-size:clamp(22px,2.4vw,38px);font-weight:300;font-style:italic;color:var(--deep)">The system in use.</p>
+    <p class="app-intro-text">The identity scales from a business card to a 60-metre construction contract. The mark, the type, the colours: identical in weight and intent at every size.</p>
+  </div>
+
+  <div class="app-grid">
+
+    <div class="biz-card">
+      <div class="bc-top">
+        <svg width="16" height="20" viewBox="0 0 52 68" fill="none">
+          <line x1="26" y1="7" x2="11" y2="34" stroke="rgba(245,240,232,0.3)" stroke-width="1.5"/>
+          <line x1="26" y1="7" x2="41" y2="34" stroke="rgba(245,240,232,0.3)" stroke-width="1.5"/>
+          <line x1="11" y1="34" x2="41" y2="34" stroke="rgba(245,240,232,0.2)" stroke-width="1.5"/>
+          <line x1="11" y1="34" x2="16" y2="60" stroke="rgba(245,240,232,0.3)" stroke-width="1.5"/>
+          <line x1="41" y1="34" x2="36" y2="60" stroke="rgba(245,240,232,0.3)" stroke-width="1.5"/>
+          <line x1="16" y1="60" x2="36" y2="60" stroke="rgba(245,240,232,0.2)" stroke-width="1.5"/>
+          <circle cx="26" cy="7" r="4" fill="#b8966b"/>
+          <circle cx="16" cy="60" r="2.5" fill="rgba(245,240,232,0.55)"/>
+          <circle cx="36" cy="60" r="2.5" fill="rgba(245,240,232,0.55)"/>
+          <circle cx="11" cy="34" r="2" fill="rgba(245,240,232,0.4)"/>
+          <circle cx="41" cy="34" r="2" fill="rgba(245,240,232,0.4)"/>
+        </svg>
+        <div class="bc-name">Alpha Lyrae<br><em>Design</em></div>
+      </div>
+      <div class="bc-info">
+        Marco Gentile<br>
+        Naval Architect<br>
+        Roma, Italia
+      </div>
+    </div>
+
+    <div class="doc-mock">
+      <div class="dm-head">
+        <div class="dm-wm">Alpha Lyrae &nbsp;<em>Design</em></div>
+        <div class="dm-ref">AL-DP-047 / B</div>
+      </div>
+      <div class="dm-body">
+        <div class="dm-l w80"></div>
+        <div class="dm-l w55"></div>
+        <div class="dm-l w70"></div>
+        <div style="height:12px"></div>
+        <div class="dm-l w40"></div>
+        <div class="dm-l w90"></div>
+        <div class="dm-l w70"></div>
+        <div class="dm-l w55"></div>
+      </div>
+    </div>
+
+    <div class="site-mock">
+      <div class="sm-nav">
+        <div class="sm-wm">Alpha Lyrae &nbsp;<em>Design</em></div>
+        <div class="sm-links">
+          <span class="on">Work</span>
+          <span>Process</span>
+          <span>Capabilities</span>
+          <span>Studio</span>
+          <span>Contact</span>
+        </div>
+      </div>
+      <div class="sm-hero">
+        <div class="sm-h">We design it.<br><em>We build it.</em></div>
+        <p class="sm-body">Naval architecture and product design, carried from the first line to the final sea trial.</p>
+        <span class="sm-cta">View projects &rarr;</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FOOTER
+══════════════════════════════════ -->
+
+<footer>
+  <div>
+    <div class="footer-mark">Alpha Lyrae &nbsp;<em>Design</em></div>
+    <div style="font-size:9px;font-weight:300;letter-spacing:0.07em;color:var(--dim);margin-top:8px">Roma, Italia &nbsp;&middot;&nbsp; alphalyraedesign.com</div>
+  </div>
+  <div class="footer-meta">
+    AL-BR-001 / Rev. A<br>
+    Brand Identity System<br>
+    2026
+  </div>
+</footer>
+
+</body>
+</html>
