@@ -1,9 +1,9 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import StockImage from '@/components/StockImage';
 import {
   YachtDesignIcon,
   ProductDesignIcon,
@@ -90,16 +90,14 @@ export default async function PracticeAreaPage(
         {/* Hero image */}
         <section className="px-8 md:px-20 pb-20">
           <div className="max-w-[1280px] mx-auto">
-            <div className="relative aspect-[16/9] overflow-hidden bg-[#0a1525]">
-              <Image
-                src={area.hero}
-                alt=""
-                fill
-                priority
-                className="object-cover"
-                sizes="(min-width: 1280px) 1280px, 100vw"
-              />
-            </div>
+            <StockImage
+              containerClassName="aspect-[16/9] overflow-hidden bg-[#0a1525]"
+              src={area.hero}
+              fill
+              priority
+              className="object-cover"
+              sizes="(min-width: 1280px) 1280px, 100vw"
+            />
           </div>
         </section>
 
@@ -173,21 +171,17 @@ export default async function PracticeAreaPage(
           <section className="px-8 md:px-20 py-20 md:py-28 border-t border-[rgba(245,240,232,0.10)]">
             <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
               {area.images.map((src, i) => (
-                <div
+                <StockImage
                   key={src}
-                  className={[
-                    'relative overflow-hidden bg-[#0a1525]',
+                  containerClassName={[
+                    'overflow-hidden bg-[#0a1525]',
                     i === 0 ? 'md:col-span-2 aspect-[16/9]' : 'aspect-[4/3]',
                   ].join(' ')}
-                >
-                  <Image
-                    src={src}
-                    alt=""
-                    fill
-                    className="object-cover"
-                    sizes="(min-width: 1280px) 1280px, 100vw"
-                  />
-                </div>
+                  src={src}
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1280px) 1280px, 100vw"
+                />
               ))}
             </div>
           </section>
